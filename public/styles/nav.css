@@ -1,7 +1,3 @@
-body {
-  margin: 0,
-}
-
 nav {
   height: 120;
   background-color: #4056A1;
@@ -12,4 +8,11 @@ nav {
 nav span {
   padding-right: 1.5em;
   padding-left: 1.5em;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.5em;
 }
