@@ -30,3 +30,7 @@ button {
 output {
   font-family: "Bungee", sans-serif;
 }
+
+.new-tweet form {
+  height: 100px; 
+}
