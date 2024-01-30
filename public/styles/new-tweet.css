@@ -34,3 +34,7 @@ output {
 .new-tweet form {
   height: 100px; 
 }
+
+.counter.negative {
+  color: rgb(165, 14, 14);
+}
