@@ -19,3 +19,11 @@ div {
   resize: none;
 }
 
+button {
+  background-color: #4056A1;
+  font-family: "Bungee", sans-serif;
+  color: antiquewhite;
+  font-size: 20px;
+  align-items:  center;
+}
+
