@@ -8,3 +8,8 @@ div {
   justify-content: space-between;
 }
 
+.new-tweet hr {
+  border: 1px solid black;
+  margin: 10px 0;
+}
+
