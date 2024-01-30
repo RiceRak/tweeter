@@ -27,3 +27,6 @@ button {
   align-items:  center;
 }
 
+output {
+  font-family: "Bungee", sans-serif;
+}
