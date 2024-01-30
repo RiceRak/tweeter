@@ -13,3 +13,9 @@ div {
   margin: 10px 0;
 }
 
+.new-tweet textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+}
+
