@@ -1,0 +1,21 @@
+article.tweet {
+  border: 2px solid black;
+  margin: 1.5em 0;
+  padding: .5em;
+}
+
+.tweet-header, .tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-footer-icons {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tweet-footer-icons i:hover {
+  color: #FFD700;
+}
