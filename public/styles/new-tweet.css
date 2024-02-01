@@ -21,14 +21,9 @@ form {
 
 button {
   background-color: #4056A1;
-  font-family: "Bungee", sans-serif;
   color: antiquewhite;
   font-size: 20px;
   align-items:  center;
-}
-
-output {
-  font-family: "Bungee", sans-serif;
 }
 
 .new-tweet form {
@@ -37,4 +32,10 @@ output {
 
 .counter.negative {
   color: rgb(165, 14, 14);
+}
+
+.new-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
 }
