@@ -1,89 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- Link to Google Fonts -->
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@1,600&display=swap" rel="stylesheet">
+  <!-- Link to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@1,600&display=swap"
+    rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/layout.css"/>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/new-tweet.css">
+  <link rel="stylesheet" href="styles/tweets-container.css">
 
-    <!-- Link to nav.css -->
-    <link rel="stylesheet" href="styles/nav.css">
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Link to Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <style>
-      .extra-small-icon {
-        font-size: 0.5em;
-      }
-    </style>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
 
-    <!-- Link to header.css -->
-    <link rel="stylesheet" href="styles/header.css">
-    <!-- Link to new-tweet.css -->
-    <link rel="stylesheet" href="styles/new-tweet.css">
-    <!-- Link to tweet-container -->
-    <link rel="stylesheet" href="styles/tweet-container.css" >
-
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
-
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-        <span>tweeter</span>
-        <div class="new-tweet-section"><div><b>Write</b>&nbsp;a new tweet</div>
-          <i class="fa-solid fa-angles-down extra-small-icon"></i>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span>
+    <div class="new-tweet-section">
+      <div><b>Write</b>&nbsp;a new tweet</div>
+      <i class="fa-solid fa-angles-down extra-small-icon"></i>
     </div>
-    </nav>
+  </nav>
 
-    <!-- Header-->
-    <header>
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Shad</h2>
-      </div>
+  <!-- Header-->
+  <header>
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Shad</h2>
+    </div>
   </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form action="/tweets" method="POST" id="tweet-form">
-          <label for="tweet-text"></label>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <hr>
-          <div class="space-between" >
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <article>
-        <div class="space-between" id="user-info"><div id="user-real-name" >Shad</div><div id="username" >@Shad</div></div>
-        <strong>Sample Tweet, What happens when this is a longer Tweet? What about if its even longer?</strong>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <form action="/tweets" method="POST" id="tweet-form">
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <hr>
-        <div class="space-between-date-icon"><div>Today</div><div><i class="fa-solid fa-flag"><i class="fa-solid fa-retweet"><i class="fa-solid fa-heart"></i></i></i></div></div>
+        <div class="new-tweet-footer">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <section class="tweets-container">
+      <article class="tweet">
+        <div class="tweet-header" id="user-info">
+          <div id="user-real-name">Shad</div>
+          <div id="username">@Shad</div>
+        </div>
+        <p class="tweet-content">Sample Tweet, What happens when this is a longer Tweet? What about if its even longer?</p>
+        <hr>
+        <div class="tweet-footer">
+          <div class="tweet-footer-date">Today</div>
+          <div class="tweet-footer-icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
       </article>
-    </main>
-  </body>
+    </section>
+  </main>
+</body>
 </html>
