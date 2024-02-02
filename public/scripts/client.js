@@ -30,6 +30,10 @@ const data = [
 ]
 
 $(document).ready(() => {
+
+  // assign a click handler to submit button
+   const postTweet = function() {
+   }
   
   const renderTweets = function(tweets) {
     // loops through tweets
