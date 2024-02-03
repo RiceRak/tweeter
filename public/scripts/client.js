@@ -11,6 +11,16 @@ $(document).ready(() => {
   // Handle post request for tweet-text form
   $('#tweet-form').on('submit', (event) => {
     event.preventDefault();
+
+    let inputText = $('#tweet-text').val();
+
+    if (inputText === '' | null ) {
+      return console.log('Please enter text')
+    }
+    if (inputText.length > 140) {
+      return console.log('Your tweet exceeds 140 characters')
+    }
+
     let text = $('#tweet-text').serialize();
 
     $.ajax({
