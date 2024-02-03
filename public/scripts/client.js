@@ -36,6 +36,18 @@ $(document).ready(() => {
     event.preventDefault();
     let text = $('#tweet-text').val();
     console.log(text);
+
+    $.ajax({
+      url: 'http://localhost:8080/tweets',
+      type: 'POST',
+      data: { text },
+      sucess: (res) => {
+        console.log(res);
+      },
+      error: (error) => {
+        console.log('There was an Error', error)
+      }
+    });
   });
 
 
