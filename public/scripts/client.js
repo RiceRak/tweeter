@@ -26,13 +26,15 @@ $(document).ready(() => {
     $.ajax({
       url: 'http://localhost:8080/tweets',
       type: 'POST',
-      data: { text },
+      data: { text: inputText },
       success: (res) => {
       },
       error: (error) => {
         console.log('There was an Error', error);
       }
     });
+
+    loadTweets(text);
   });
 
   // Responsible for fetching tweets from the http://localhost:8080/tweets data page
