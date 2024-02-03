@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const data = [
   {
     "user": {
@@ -34,14 +35,15 @@ $(document).ready(() => {
   
   $('#tweet-form').on('submit', (event) => {
     event.preventDefault();
-    let text = $('#tweet-text').val();
+    let text = $('#tweet-text').serialize();
     console.log(text);
+    
 
     $.ajax({
       url: 'http://localhost:8080/tweets',
       type: 'POST',
       data: { text },
-      sucess: (res) => {
+      success: (res) => {
         console.log(res);
       },
       error: (error) => {
@@ -58,7 +60,6 @@ $(document).ready(() => {
     for (let i = 0; i < tweets.length; i++) {
       const tweet = tweets[i];
       let storedTweet = createTweetElement(tweet);
-      console.log(storedTweet)
       tweetsContainer.prepend(storedTweet);
     }
 }
