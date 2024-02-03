@@ -59,7 +59,7 @@ $(document).ready(() => {
 
   // Create markup article to show in new-tweet section
   const createTweetElement = function(obj) {
-  
+  let date = timeago.format(obj.created_at)
     let markUp = `
   <div class="tweet-header" id="user-info">
      <div id="user-real-name">
@@ -71,7 +71,7 @@ $(document).ready(() => {
     <p class="tweet-content">${obj.content.text}</p>
      <hr>
   <div class="tweet-footer">
-    <div class="tweet-footer-date">${obj.created_at}</div>
+    <div class="tweet-footer-date">${date}</div>
      <div class="tweet-footer-icons">
        <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -83,5 +83,4 @@ $(document).ready(() => {
   
     return $tweet;
   };
-
 });
