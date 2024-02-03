@@ -31,9 +31,14 @@ const data = [
 
 $(document).ready(() => {
 
-  // assign a click handler to submit button
-   const postTweet = function() {
-   }
+  
+  $('#tweet-form').on('submit', (event) => {
+    event.preventDefault();
+    let text = $('#tweet-text').val();
+    console.log(text);
+  });
+
+
   
   const renderTweets = function(tweets) {
     // loops through tweets
@@ -76,4 +81,4 @@ $(document).ready(() => {
   
  renderTweets(data);
 
-})
+});
