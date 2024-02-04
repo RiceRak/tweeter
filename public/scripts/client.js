@@ -11,9 +11,8 @@ $(document).ready(() => {
   // Handle post request for tweet-text form
   $('#tweet-form').on('submit', (event) => {
     const errorElement = $('#show-error');
-
+    // Let the browser know that you will handle the form submission differently
     event.preventDefault();
-
     errorElement.html('').slideUp();
 
     let inputText = $('#tweet-text').val();
@@ -27,7 +26,7 @@ $(document).ready(() => {
     }
 
     let text = $('#tweet-text').serialize();
-
+    // Post request to udpate tweeter db
     $.ajax({
       url: 'http://localhost:8080/tweets',
       type: 'POST',
@@ -83,6 +82,7 @@ $(document).ready(() => {
     };
 
   let date = timeago.format(obj.created_at)
+  
     let markUp = `
   <div class="tweet-header" id="user-info">
      <div id="user-real-name">
