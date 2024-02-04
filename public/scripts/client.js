@@ -10,15 +10,20 @@ $(document).ready(() => {
 
   // Handle post request for tweet-text form
   $('#tweet-form').on('submit', (event) => {
+    const errorElement = $('#show-error');
+
     event.preventDefault();
+
+    errorElement.html('').slideUp();
 
     let inputText = $('#tweet-text').val();
 
-    if (inputText === '' | null ) {
-      return console.log('Please enter text')
+    if (inputText === '' || inputText === null) {
+      return errorElement.html('⚠ You are not humming about anything. Fill out the form and try again! ⚠').slideDown();
     }
+
     if (inputText.length > 140) {
-      return console.log('Your tweet exceeds 140 characters')
+      return errorElement.html('⚠ You are humming about too much. Use 140 characters or less! ⚠').slideDown();
     }
 
     let text = $('#tweet-text').serialize();
