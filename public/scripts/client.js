@@ -7,7 +7,7 @@
 
 // Make sure the page loads first
 $(document).ready(() => {
-
+  const tweetTextArea = $('#tweet-text');
   // Handle post request for tweet-text form
   $('#tweet-form').on('submit', (event) => {
     const errorElement = $('#show-error');
@@ -24,6 +24,8 @@ $(document).ready(() => {
     if (inputText.length > 140) {
       return errorElement.html('⚠ You are humming about too much. Use 140 characters or less! ⚠').slideDown();
     }
+
+    tweetTextArea.val('');
 
     let text = $('#tweet-text').serialize();
     // Post request to udpate tweeter db
