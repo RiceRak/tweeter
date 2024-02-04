@@ -20,9 +20,8 @@ The main page should look something like this! (You can edit index.html - line 5
 Write your thoughts here to post. Remember to input something and keep it under 140 characters.
 !["Tweet form"](https://github.com/RiceRak/tweeter/blob/master/docs/Write%20your%20thoughts%20here.JPG)
 
-Watch your thoughts be printed.
-!["Tweet Content](https://github.com/RiceRak/tweeter/blob/master/docs/Tweeter%20content.JPG)
-
+Watch your thoughts print!
+!["Tweet Content"](https://github.com/RiceRak/tweeter/blob/master/docs/Tweeter%20content.JPG)
 
 ## Dependencies
 
