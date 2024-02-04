@@ -21,6 +21,7 @@ Write your thoughts here to post. Remember to input something and keep it under 
 !["Tweet form"](https://github.com/RiceRak/tweeter/blob/master/docs/Write%20your%20thoughts%20here.JPG)
 
 Watch your thoughts be printed!
+
 !["Tweet Content](https://github.com/RiceRak/tweeter/blob/master/docs/Tweeter%20content.JPG)
 
 
