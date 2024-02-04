@@ -1,6 +1,7 @@
 form {
   display: flex;
   flex-direction: column;
+  padding: .5em;
 }
 
 .new-tweet hr {
@@ -17,6 +18,7 @@ form {
   border: none;
   background-color: transparent;
   resize: none;
+  padding: .5em;
 }
 
 button {
@@ -27,7 +29,7 @@ button {
 }
 
 .new-tweet form {
-  height: 100px; 
+  height: 125px; 
 }
 
 .counter.negative {
