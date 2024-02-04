@@ -3,6 +3,8 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
+## The Goal
+
 This repository was built in addition to the starter code that Lighthouse Labs has provided. I forked this and added on the requirements to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, and my Node, Express back-end skills.
 
 ## Getting Started
@@ -34,3 +36,8 @@ Watch your thoughts print!
 - Chance
 - md5
 - nodemon
+
+## Acknowledgments
+
+This product was built with very heavy guidance from the LHL staff!
+
