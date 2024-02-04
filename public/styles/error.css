@@ -1,0 +1,7 @@
+#show-error {
+  display: none;
+  color: rgb(165, 14, 14);
+  border: 2px solid rgb(165, 14, 14);
+  padding: .2em;
+  margin: .5em;
+}
