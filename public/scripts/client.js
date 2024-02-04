@@ -8,9 +8,10 @@
 // Make sure the page loads first
 $(document).ready(() => {
   const tweetTextArea = $('#tweet-text');
+  const errorElement = $('#show-error');
   // Handle post request for tweet-text form
   $('#tweet-form').on('submit', (event) => {
-    const errorElement = $('#show-error');
+    
     // Let the browser know that you will handle the form submission differently
     event.preventDefault();
     errorElement.html('').slideUp();
