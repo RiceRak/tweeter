@@ -15,12 +15,15 @@ This repository was built in addition to the starter code that Lighthouse Labs h
 
 ## Screenshots
 The main page should look something like this! (You can edit index.html - line 52, to display your own name)
+
 !["The main Navigation bar and User Profile"](https://github.com/RiceRak/tweeter/blob/master/docs/Profile%20and%20main%20display.JPG)
 
 Write your thoughts here to post. Remember to input something and keep it under 140 characters.
+
 !["Tweet form"](https://github.com/RiceRak/tweeter/blob/master/docs/Write%20your%20thoughts%20here.JPG)
 
 Watch your thoughts print!
+
 !["Tweet Content"](https://github.com/RiceRak/tweeter/blob/master/docs/Tweeter%20content.JPG)
 
 ## Dependencies
