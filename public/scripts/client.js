@@ -35,6 +35,7 @@ $(document).ready(() => {
       type: 'POST',
       data: { text: inputText },
       success: (res) => {
+        loadTweets(text);
       },
       error: (error) => {
         console.log('There was an Error', error);
@@ -65,7 +66,7 @@ $(document).ready(() => {
   // Iterate through the http://localhost:8080/tweets array data
   const renderTweets = function(arr) {
 
-    let tweetsContainer = $("#tweets-container").html('');
+    let tweetsContainer = $("#tweets-container").empty();
     for (let i = 0; i < arr.length; i++) {
       const tweet = arr[i];
       // Convert data into the mark up that is created in the createTweetElement function
