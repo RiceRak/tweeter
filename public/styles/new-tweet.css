@@ -14,6 +14,10 @@ form {
   margin: 10px 0;
 }
 
+.container {
+  overflow-wrap: break-word;
+}
+
 .new-tweet textarea {
   border: none;
   background-color: transparent;
