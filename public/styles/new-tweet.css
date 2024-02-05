@@ -33,7 +33,7 @@ button {
 }
 
 .new-tweet form {
-  height: 125px; 
+  height: auto;
 }
 
 .counter.negative {
