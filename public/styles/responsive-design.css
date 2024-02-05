@@ -1,3 +1,10 @@
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-image: url('http://www.transparenttextures.com/patterns/dark-mosaic.png');
+  }
+
+}
+
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
