@@ -31,10 +31,11 @@ $(document).ready(() => {
     let text = $('#tweet-text').serialize();
     // Post request to udpate tweeter db
     $.ajax({
-      url: 'http://localhost:8080/tweets',
+      url: '/tweets',
       type: 'POST',
       data: { text: inputText },
-      success: (res) => {
+      success: () => {
+        $('.counter').text(140);
         loadTweets(text);
       },
       error: (error) => {
@@ -45,11 +46,11 @@ $(document).ready(() => {
     loadTweets(text);
   });
 
-  // Responsible for fetching tweets from the http://localhost:8080/tweets data page
+  // Responsible for fetching tweets from /tweets data page
   const loadTweets = function() {
   
     $.ajax({
-      url: 'http://localhost:8080/tweets',
+      url: '/tweets',
       type: 'GET',
       success: (tweets) => {
         // If successful, render the page
@@ -63,7 +64,7 @@ $(document).ready(() => {
   // Function call
   loadTweets();
   
-  // Iterate through the http://localhost:8080/tweets array data
+  // Iterate through /tweets array data
   const renderTweets = function(arr) {
 
     let tweetsContainer = $("#tweets-container").empty();
@@ -89,10 +90,10 @@ $(document).ready(() => {
   
     let markUp = `
   <div class="tweet-header" id="user-info">
-     <div id="user-real-name">
-      <img src="${obj.user.avatars}">
-       ${obj.user.name}
-     </div>
+      <div id="avatar-and-real-name"><img src="${obj.user.avatars}">
+       <div id="user-real-name">${obj.user.name}
+       </div>
+      </div>
     <div id="username">${obj.user.handle}</div>
   </div>
     <p class="tweet-content">${escape(obj.content.text)}</p>
