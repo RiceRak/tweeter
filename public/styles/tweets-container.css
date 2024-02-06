@@ -7,7 +7,6 @@ article.tweet {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 180px;
   justify-content: space-between;
 }
 .tweet-header, .tweet-footer {

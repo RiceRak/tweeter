@@ -90,7 +90,7 @@ $(document).ready(() => {
   
     let markUp = `
   <div class="tweet-header" id="user-info">
-      <div class="avatar-and-real-name"><img src="${obj.user.avatars}">
+      <div class="avatar-and-real-name"><img src="${obj.user.avatars}">&nbsp;&nbsp;
        <div id="user-real-name">${obj.user.name}
        </div>
       </div>
