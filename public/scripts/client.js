@@ -43,7 +43,7 @@ $(document).ready(() => {
     .fail((error) => {
       console.log('There was an Error', error);
     
-      alert('Oops! Something went wrong. Please try again later.');
+      alert('Oops! Something went wrong on our end. Please try again later.');
     });
 
     loadTweets(text);
@@ -62,7 +62,7 @@ $(document).ready(() => {
       error: (error) => {
         console.log('Error loading tweets', error);
 
-        alert('Oops! Something went wrong. Please try again later.');
+        alert('Oops! Something went wrong on our end. Please try again later.');
       }
     });
   };
