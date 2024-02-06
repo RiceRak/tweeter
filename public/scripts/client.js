@@ -18,7 +18,11 @@ $(document).ready(() => {
 
     let inputText = $('#tweet-text').val();
 
-    if (inputText === '' || inputText === null) {
+    if (!inputText) {
+      return errorElement.html('⚠ You are not humming about anything. Fill out the form and try again! ⚠').slideDown();
+    }
+
+    if (inputText === null) {
       return errorElement.html('⚠ You are not humming about anything. Fill out the form and try again! ⚠').slideDown();
     }
 

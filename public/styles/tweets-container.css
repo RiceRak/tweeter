@@ -3,6 +3,9 @@ article.tweet {
   margin: 1.5em 0;
   padding: .5em;
 }
+.tweet:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
+}
 .avatar-and-real-name {
   display: flex;
   flex-direction: row;
