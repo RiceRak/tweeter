@@ -22,10 +22,6 @@ $(document).ready(() => {
       return errorElement.html('⚠ You are not humming about anything. Fill out the form and try again! ⚠').slideDown();
     }
 
-    if (inputText === null) {
-      return errorElement.html('⚠ You are not humming about anything. Fill out the form and try again! ⚠').slideDown();
-    }
-
     if (inputText.length > 140) {
       return errorElement.html('⚠ You are humming about too much. Use 140 characters or less! ⚠').slideDown();
     }
