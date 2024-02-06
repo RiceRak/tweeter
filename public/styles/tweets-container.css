@@ -3,7 +3,7 @@ article.tweet {
   margin: 1.5em 0;
   padding: .5em;
 }
-#avatar-and-real-name {
+.avatar-and-real-name {
   display: flex;
   flex-direction: row;
   align-items: center;
