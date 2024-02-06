@@ -29,18 +29,21 @@ $(document).ready(() => {
     tweetTextArea.val('');
 
     let text = $('#tweet-text').serialize();
-    // Post request to udpate tweeter db
+    
+    // Post request to udpate tweeter db using promises
     $.ajax({
       url: '/tweets',
       type: 'POST',
-      data: { text: inputText },
-      success: () => {
-        $('.counter').text(140);
-        loadTweets(text);
-      },
-      error: (error) => {
-        console.log('There was an Error', error);
-      }
+      data: { text: inputText }
+    })
+    .done(() => {
+      $('.counter').text(140);
+      loadTweets(text);
+    })
+    .fail((error) => {
+      console.log('There was an Error', error);
+    
+      alert('Oops! Something went wrong. Please try again later.');
     });
 
     loadTweets(text);
@@ -58,6 +61,8 @@ $(document).ready(() => {
       },
       error: (error) => {
         console.log('Error loading tweets', error);
+
+        alert('Oops! Something went wrong. Please try again later.');
       }
     });
   };
